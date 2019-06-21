@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main()
+{
+	int a[80],b[80],c[80],i,n;
+	printf("请输入数组a中数的个数:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("请输入数组a的第%d个数:",i+1);
+		scanf("%d",&a[i]);
+	}
+	if(n<80)
+	{
+		for(i=n;i<80;i++)
+		{
+			a[i]=0;
+		}
+	}
+	printf("请输入数组b中数的个数:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("请输入数组b的第%d个数:",i+1);
+		scanf("%d",&b[i]);
+	}
+	if(n<80)
+	{
+		for(i=n;i<80;i++)
+		{
+			b[i]=0;
+		}
+	}
+	for(i=0;i<80;i++)
+	{
+		c[i]=a[i]+b[i];
+		if(c[i]==0)
+		{
+			;
+		}
+		else
+		{
+			printf("%d",c[i]);
+		}
+	}
+}
